@@ -1,0 +1,227 @@
+
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Future Goals — Patrick Nguyen</title>
+  <meta name="description" content="Explore Patrick Nguyen's goals for the future." />
+
+  <style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #4b0082, #8b0000);
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /*  Header  */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #ffffff;
+    z-index: 1000;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1100px, 94%);
+    margin: 0 auto;
+    padding: 13px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: #fff;
+  }
+  .brand img { width: 42px; height: 42px; border-radius: 6px; object-fit: cover; }
+  .site-title { font-weight: 700; font-size: 18px; }
+
+  .nav {
+    display: flex; gap: 13px; flex-wrap: wrap;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 13px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .nav a:hover, .nav a:focus, .nav a[aria-current="page"] {
+    background: #6a0dad;
+    color: #fff;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+  }
+  .skip-link:focus {
+    left: 10px;
+    top: 70px;
+    background: #6a0dad;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    z-index: 2000;
+  }
+
+  /*  Main Content  */
+  main {
+    width: min(1100px, 94%);
+    margin: 0 auto;
+    padding: 100px 0 64px; /* top padding for fixed header */
+  }
+
+  h1.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  /*  Alternating Sections  */
+  .goals-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+    border-bottom: 1px solid #fff;
+  }
+  .goals-section:nth-child(even) { flex-direction: row-reverse; }
+  .goals-section-text {
+    flex: 1;
+  }
+  .goals-section-text h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .goals-section-text p {
+    font-size: 16px;
+    color: #f0f0f0;
+  }
+  .goals-section-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .goals-section-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+  .goals-section-media figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.goals-section-media figcaption {
+  font-size: 14px;
+  color: #f0f0f0;
+  margin-top: 8px;
+  font-style: italic;
+  max-width: 90%;
+}
+
+
+  /*  Mobile Responsive  */
+  @media (max-width: 768px) {
+    .goals-section {
+      flex-direction: column !important;
+      text-align: center;
+    }
+    .goals-section-media { margin-top: 20px; }
+    .goals-section-text h2 { font-size: 24px; }
+    .goals-section-text p { font-size: 15px; }
+  }
+  @media (max-width: 480px) {
+    .goals-section-text h2 { font-size: 20px; }
+    .goals-section-text p { font-size: 14px; }
+  }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!--  HEADER  -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="Images/Portrait1.JPG" alt="Patrick Nguyen">
+        <span class="site-title">Patrick Nguyen</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <a href="Homepage.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="FutureGoals.html" aria-current="page">Future Goals</a>
+        <a href="Resume.html">Resume</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Future Goals</h1>
+
+    <!-- Section 1 -->
+    <section class="goals-section">
+      <div class="goals-section-text">
+        <h2>Short-Term Goals</h2>
+        <ul>
+            <li>Finish my Bachelors degree in Management Information Systems.</li> 
+            <li>Secure an internship or entry-level job to get my foot through the door in the supply chain/logistics management field.</li>
+            <li>Expand my skills and knowledge of data analysis, programming, and supply chain operations through building personal projects and obtaining entry level certifications.</li>
+        </ul>
+      </div>
+      <div class="goals-section-media">
+        <figure>
+        <img src="Images/InternshipPhoto.jpg">
+        <figcaption>
+            An Internship I did with a team of other SDSU students for LAM Research in 2025.
+        </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="goals-section">
+      <div class="goals-section-text">
+        <h2>Mid-Term Goals</h2>
+        <ul>
+            <li>Find a professional and long term environment where I can both contribute and accumulate more experience.</li>
+            <li>Continue to develop personal projects and obtain more professional and extensive certifications.</li>
+            <li>Connect and network with experienced mentors in order to be on the cutting edge of technology and advance my career.</li>
+        </ul>
+      </div>
+      <div class="goals-section-media">
+        <img src="Images/Goals1.jpg" alt="Medium-Term Goals">
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="goals-section">
+      <div class="goals-section-text">
+        <h2>Long-Term Goals</h2>
+        <ul>
+            <li>Establish a long term career in Supply Chain and Logistics Management, potentially landing high positions in a hi-tech company like Apple or Samsung.</li>
+            <li>Use my acquired Skill and Experiences to teach the next generation.</li>
+            <li>Lead innovative projects that have real-world impacts and advance the innovation of technology and techniques.</li>
+        </ul>
+      </div>
+      <div class="goals-section-media">
+        <img src="Images/Goals2.jpg" alt="Long-Term Goals">
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>

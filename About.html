@@ -1,0 +1,234 @@
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Patrick Nguyen</title>
+  <meta name="description" content="Learn more about Patrick Nguyen, his background, interests, and professional goals." />
+
+  <style>
+  /*  Base Reset  */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #4b0082, #8b0000);
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /*  Header  */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #ffffff;
+    z-index: 1000;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1100px, 94%);
+    margin: 0 auto;
+    padding: 13px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: #fff;
+  }
+  .brand img { width: 42px; height: 42px; border-radius: 6px; object-fit: cover; }
+  .site-title { font-weight: 700; font-size: 18px; }
+
+  .nav {
+    display: flex; gap: 13px; flex-wrap: wrap;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 13px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .nav a:hover, .nav a:focus, .nav a[aria-current="page"] {
+    background: #6a0dad;
+    color: #fff;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+  }
+  .skip-link:focus {
+    left: 10px;
+    top: 70px;
+    background: #6a0dad;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    z-index: 2000;
+  }
+
+  /*  Main Content  */
+  main {
+    width: min(1100px, 94%);
+    margin: 0 auto;
+    padding: 100px 0 64px; /* top padding for fixed header */
+  }
+
+  h1.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  /*  Alternating Sections  */
+  .about-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0;
+    border-bottom: 1px solid #fff;
+  }
+  .about-section:nth-child(even) { flex-direction: row-reverse; }
+  .about-section-text {
+    flex: 1;
+  }
+  .about-section-text h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  .about-section-text p {
+    font-size: 16px;
+    color: #f0f0f0;
+  }
+  .about-section-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-section-media img,
+  .about-section-media video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+  .about-section-media figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-section-media figcaption {
+  font-size: 14px;
+  color: #f0f0f0;
+  margin-top: 8px;
+  font-style: italic;
+  max-width: 90%;
+}
+
+.about-section-media video {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+
+  /*  Mobile Responsive  */
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column !important;
+      text-align: center;
+    }
+    .about-section-media {
+      margin-top: 20px;
+    }
+    .about-section-text h2 { font-size: 24px; }
+    .about-section-text p { font-size: 15px; }
+  }
+  @media (max-width: 480px) {
+    .about-section-text h2 { font-size: 20px; }
+    .about-section-text p { font-size: 14px; }
+  }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="Homepage.html">
+        <img src="Images/Portrait1.JPG" alt="Patrick Nguyen">
+        <span class="site-title">Patrick Nguyen</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <a href="Homepage.html">Home</a>
+        <a href="About.html" aria-current="page">About</a>
+        <a href="FutureGoals.html">Future Goals</a>
+        <a href="Resume.html">Resume</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">About Me</h1>
+
+    <!-- Section 1 -->
+    <section class="about-section">
+      <div class="about-section-text">
+        <h2>Background</h2>
+        <p>I was born and raised in Mira Mesa, San Diego on August 18th, 2001. I graduated Mira Mesa High School in 2019, went to Miramar Community College until 2022, then transferred to San Diego State University where I currently
+            am majoring in Management Information Systems and expected to graduate in 2026. Throughout my life, computers and technology have alway fascinated me, from playing video games to first learning how to code the Snake Game I have 
+            always had a love of learning about computers and building them.
+        </p>
+      </div>
+      <div class="about-section-media">
+        <img src="Images/IMG_0315.jpg" alt="Background Image">
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="about-section">
+      <div class="about-section-text">
+        <h2>Education & Skills</h2>
+        <p>When I first went to Miramar Community College, I went in as a Computer Science major and graduated with an associates in Computer Science. However, once I reached SDSU, I realized that I
+            greatly enjoyed the business side of things during my electives and thus, switched my major to MIS, or Management Information Systems. This allowed me to combine a budding field and a lifetime
+            interest in computers. Throughout my years at college I learned many coding languages, such as Python, C, C++, HTML, SQL, and Java, combined with learning business applications such as SAP and Excel
+            I have quickly accumulated a wide variety of skills that I believe many employers will benefit from. If you want to learn more, head over to the resume page.
+
+        </p>
+      </div>
+      <div class="about-section-media">
+        <img src="Images/SDSU.jpg" alt="Skills Image">
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="about-section">
+      <div class="about-section-text">
+        <h2>Interests & Hobbies</h2>
+        <p>Outside of academics, I enjoy video games, playing tabletop games like Warhammer 40K and Daggerheart, going to the gym and working out, camping, and engaging in many other creative projects. Reading
+            Fantasy, Sci-Fi, and horror have become a new hobby for me, especially listening to audiobooks whilst I assemble and paint miniatures for Warhammer 40K.
+        </p>
+      </div>
+      <div class="about-section-media">
+        <figure>
+        <video controls>
+          <source src="Images/425Squat1.mp4">
+        </video>
+        <figcaption>
+          Video of me squatting 425 pounds at my local gym.
+        </figcaption>
+      </div>
+    </section>
+    </figure>
+  </main>
+</body>
+</html>

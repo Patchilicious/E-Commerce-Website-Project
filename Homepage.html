@@ -1,0 +1,277 @@
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patrick Nguyen — Website</title>
+  <meta name="description" content="Welcome to Patrick Nguyen's Website." />
+
+  <style>
+  /*  Base Reset  */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #4b0082, #8b0000);
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /*  Header  */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #ffffff;
+    z-index: 1000;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1100px, 94%);
+    margin: 0 auto;
+    padding: 13px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: #fff;
+  }
+  .brand img { width: 42px; height: 42px; border-radius: 6px; object-fit: cover; }
+  .site-title { font-weight: 700; font-size: 18px; }
+
+  .nav {
+    display: flex; gap: 13px; flex-wrap: wrap;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 13px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .nav a:hover, .nav a:focus {
+    background: #6a0dad;
+    color: #fff;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -999px;
+  }
+  .skip-link:focus {
+    left: 10px;
+    top: 70px;
+    background: #6a0dad;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    z-index: 2000;
+  }
+
+  /*  Intro Section  */
+  .intro {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #4b0082, #8b0000);
+    color: #fff;
+    text-align: center;
+    flex-direction: column;
+    z-index: 2000;
+    overflow: hidden;
+    animation: fadeOut 1s ease forwards;
+    animation-delay: 5s;
+  }
+  .intro h1 {
+    font-size: 29px;
+    font-weight: 500;
+    max-width: 90%;
+    border-right: 3px solid #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4.5s steps(40, end) forwards, blink 0.8s step-end infinite;
+  }
+  @keyframes typing { from { width: 0 } to { width: 22ch } }
+  @keyframes blink { from, to { border-color: transparent } 50% { border-color: #fff; } }
+  @keyframes fadeOut { to { opacity: 0; visibility: hidden; position: absolute; } }
+
+  /*  Profile Photo  */
+  .profile-photo {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+    position: relative;
+    z-index: 1;
+  }
+  .profile-photo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  }
+
+  /*  Main Content  */
+  main {
+    width: min(1100px, 94%);
+    margin: 0 auto;
+    padding: 64px 0 64px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 5s;
+  }
+  @keyframes fadeIn { to { opacity: 1; } }
+
+  .welcome { text-align: center; margin-top: 32px; }
+  .welcome h2 { font-size: 29px; margin-bottom: 16px; color: #f0f0f0; }
+  .welcome p { max-width: 700px; margin: 0 auto; color: #f0f0f0; font-size: 16px; }
+
+  /*  Cards Section  */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    margin-top: 32px;
+  }
+  .card {
+    background: rgba(0,0,0,0.5);
+    padding: 26px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    background: linear-gradient(135deg, #4b0082, #8b0000);
+  }
+  .card h3 { color: #fff; margin-bottom: 8px; }
+  .card p { color: #f0f0f0; }
+  .card a { text-decoration: none; color: #d3cbff; font-weight: 600; transition: color 0.3s ease; }
+  .card a:hover { color: #fff; }
+
+  /*  Social Media Section  */
+  .social-section {
+    text-align: center;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid #ffffff;
+  }
+  .social-section h3 { color: #ffcccb; margin-bottom: 16px; }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .social-links a {
+    text-decoration: none;
+    color: #e093ff;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  .social-links a:hover { transform: translateY(-2px); }
+  .social-links a.linkedin:hover { color: #0e76a8; }
+  .social-links a.instagram:hover { color: #e1306c; }
+  .social-links a.facebook:hover { color: #1877f2; }
+
+  /*  Mobile Responsive  */
+  @media (max-width: 768px) {
+    .header-inner { flex-direction: column; gap: 8px; padding: 10px 0; }
+    .welcome h2 { font-size: 24px; }
+    .welcome p { font-size: 15px; }
+    .profile-photo img { width: 200px; height: 200px; }
+    .cards { gap: 16px; }
+    .card { padding: 20px; }
+    .social-links { flex-direction: column; gap: 16px; }
+  }
+
+  @media (max-width: 480px) {
+    .welcome h2 { font-size: 20px; }
+    .welcome p { font-size: 14px; }
+    .profile-photo img { width: 160px; height: 160px; }
+    .cards { gap: 12px; }
+    .card { padding: 16px; }
+  }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="Images/Portrait1.JPG" alt="Patrick Nguyen">
+        <span class="site-title">Patrick Nguyen</span>
+      </a>
+      <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <a href="Homepage.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="FutureGoals.html">Future Goals</a>
+        <a href="Resume.html">Resume</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="profile-photo">
+    <img src="Images/Portrait2.JPG" alt="Patrick Nguyen Portrait">
+  </section>
+
+  <section class="intro">
+    <h1>Welcome To My Website.</h1>
+  </section>
+
+  <main id="main">
+    <section class="welcome">
+      <h2>Hi, My Name Is Patrick Nguyen</h2>
+      <p>
+        I am a current student at San Diego State University, majoring in Management Information Systems. Explore my background, skills, and goals for the future. Feel free to connect with me at any time.
+      </p>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h3>About Me</h3>
+        <p>Learn more about my background, interests, and what drives my passion for technology.</p>
+        <a href="about.html">Read More →</a>
+      </div>
+      <div class="card">
+        <h3>Future Goals</h3>
+        <p>Discover the professional and personal goals I’m working toward in my career journey.</p>
+        <a href="FutureGoals.html">Explore Goals →</a>
+      </div>
+      <div class="card">
+        <h3>Resume</h3>
+        <p>Take a look at my Resume to see my education, experience, and skills.</p>
+        <a href="Resume.html">View Resume →</a>
+      </div>
+      <div class="card">
+        <h3>Contact</h3>
+        <p>Want to reach out? You can find my Contact details and profiles here.</p>
+        <a href="Contact.html">Get in Touch →</a>
+      </div>
+    </section>
+
+    <section class="social-section">
+      <h3>Connect With Me Through These Links.</h3>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/patrick-nguyen-96197a24a/" target="_blank" aria-label="LinkedIn profile" class="linkedin">LinkedIn</a>
+        <a href="https://www.instagram.com/le_patchilicious/" target="_blank" aria-label="Instagram profile" class="instagram">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=100004732669254" target="_blank" aria-label="Facebook profile" class="facebook">Facebook</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

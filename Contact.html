@@ -1,0 +1,231 @@
+
+
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Patrick Nguyen</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /*  Global Styles  */
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #000000, #4b0082, #8b0000);
+      background-attachment: fixed;
+      color: #fff;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    header h1 {
+      font-size: 42px;
+      letter-spacing: 1.5px;
+      margin-bottom: 15px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    nav a:hover {
+      border-color: #fff;
+    }
+
+    /*  Contact Section  */
+    .contact-container {
+      max-width: 900px;
+      margin: 80px auto;
+      background-color: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 50px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background-color: #1a1a1a;
+      color: #fff;
+      font-size: 16px;
+      outline: none;
+    }
+
+    textarea {
+      height: 150px;
+      resize: none;
+    }
+
+    button {
+      background-color: #8b0000;
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #b22222;
+      transform: translateY(-2px);
+    }
+
+    /*  Social Media Section  */
+    .social-media {
+      text-align: center;
+      margin: 100px auto 60px;
+    }
+
+    .social-media h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 18px 28px;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .social-links a:hover {
+      background-color: #8b0000;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    }
+
+
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 32px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 10px;
+      }
+
+      .contact-container {
+        margin: 50px 20px;
+        padding: 35px;
+      }
+
+      .social-links {
+        gap: 20px;
+      }
+
+      .social-links a {
+        font-size: 16px;
+        padding: 14px 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="Homepage.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="FutureGoals.html">Future Goals</a>
+      <a href="Resume.html">Resume</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-container">
+    <h2>Get in Touch</h2>
+    <form action="mailto:pnguyen8128@sdsu.edu" method="POST" enctype="text/plain">
+      <div>
+        <label for="name">Name:</label>
+        <input id="name" type="text" name="name" required>
+      </div>
+
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required>
+      </div>
+
+      <div>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <section class="social-media">
+    <h2>Connect With Me</h2>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/patrick-nguyen-96197a24a/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/le_patchilicious/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=100004732669254" target="_blank">Facebook</a>
+    </div>
+  </section>
+
+
+</body>
+</html>

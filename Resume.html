@@ -1,0 +1,181 @@
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patrick Nguyen — Resume</title>
+  <meta name="description" content="Patrick Nguyen's Resume Page" />
+
+  <style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #4b0082, #8b0000);
+    background-attachment: fixed;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /*  Header  */
+  .site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #fff;
+    z-index: 1000;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: min(1100px, 94%);
+    margin: 0 auto;
+    padding: 15px 0;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: #fff;
+  }
+  .brand img { width: 42px; height: 42px; border-radius: 6px; object-fit: cover; }
+  .site-title { font-weight: 700; font-size: 1.1rem; }
+
+  .nav { display: flex; gap: 12px; flex-wrap: wrap; }
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+  }
+  .nav a:hover { background: #6a0dad; }
+
+  /*  Main Resume Section  */
+  main {
+    width: min(1100px, 94%);
+    margin: 120px auto 60px;
+    text-align: center;
+  }
+
+  .resume-header {
+    margin-bottom: 40px;
+  }
+  .resume-header h1 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .resume-header p {
+    color: #e0e0e0;
+    font-size: 18px;
+  }
+
+  /*  Resume Card  */
+  .resume-card {
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 40px 30px;
+    border: 1px solid #333;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .resume-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+  }
+
+  .resume-card h2 {
+    color: #ffcccb;
+    margin-bottom: 20px;
+  }
+  .resume-card p {
+    color: #f0f0f0;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /*  Download Button  */
+  .download-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #6a0dad, #8b0000);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+  }
+
+  .note {
+    margin-top: 10px;
+    color: #cfcfcf;
+    font-size: 14px;
+  }
+
+  /*  Responsive  */
+  @media (max-width: 768px) {
+    .resume-card {
+      padding: 25px 15px;
+    }
+    .resume-header h1 {
+      font-size: 26px;
+    }
+    .resume-header p {
+      font-size: 16px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="Images/Portrait1.JPG" alt="Patrick Nguyen Logo">
+        <span class="site-title">Patrick Nguyen</span>
+      </a>
+      <nav class="nav">
+        <a href="Homepage.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="FutureGoals.html">Future Goals</a>
+        <a href="Resume.html" aria-current="page">Resume</a>
+        <a href="Contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="resume-header">
+      <h1>My Resume</h1>
+    </section>
+
+    <section class="resume-card">
+      <h2>Education</h2>
+      <p><strong>San Diego State University</strong> — B.S. in Management Information Systems</p>
+      <p>Expected Graduation: 2026</p>
+      <p><strong>SDCCD Miramar College</strong> — A.S. in Computer Science</p>
+      <p>Graduated 2022</p>
+
+      <h2>Experience</h2>
+      <p><strong>Lam Research</strong> — Management Information Systems Intern</p>
+      <p><strong>Ammo Bros</strong> — Retail Sales Associate & Auditor</p>
+
+      <h2>Programming Skills</h2>
+      <p>Python, SQL, HTML, CSS, C, C++, Java, Microsoft and Google Office Suite</p>
+
+    </section>
+
+    <!-- Download Section -->
+    <section>
+      <a href="Files/Patrick's Resume.pdf" download class="download-btn">Download My Resume</a>
+      <p class="note">Click above to save a copy of my resume as a PDF.</p>
+    </section>
+  </main>
+</body>
+</html>
